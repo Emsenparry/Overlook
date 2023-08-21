@@ -4,6 +4,5 @@ export const theme = {
         grey: '#707070',
         darkgrey: "#333333"
     },
-    fonts: ['Titillium Web',
-    'Open Sans']
+    fonts: ['Open Sans']
 }
