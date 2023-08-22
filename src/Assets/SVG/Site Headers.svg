@@ -1,0 +1,7 @@
+<svg className="site-header" xmlns="http://www.w3.org/2000/svg" width="769.111" height="83.506" viewBox="0 0 769.111 83.506">
+  <g id="Site_Headers" data-name="Site Headers" transform="translate(0.5)">
+    <path id="Path_6" data-name="Path 6" d="M226,309.189H994.233s8.942,64.915-60.185,64.915H226Z" transform="translate(-226 -309.189)" fill="#333" opacity="0.899"/>
+    <text id="VELKOMMEN_TIL_HOTEL_OVERLOOK_ONLINE" data-name="VELKOMMEN TIL HOTEL OVERLOOK ONLINE" transform="translate(24 44.811)" fill="none" font-size="32" font-family="OpenSans-SemiBold, Open Sans" font-weight="600"><tspan x="0" y="0">VELKOMMEN TIL HOTEL OVERLOOK ONLINE</tspan></text>
+    <path id="Path_7" data-name="Path 7" d="M226,309.189H853.708s7.307,18.092-49.176,18.092H226Z" transform="translate(-226 -244.275)" fill="red" stroke="#707070" stroke-width="1" opacity="0.499"/>
+  </g>
+</svg>

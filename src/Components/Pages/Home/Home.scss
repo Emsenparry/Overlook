@@ -1,0 +1,44 @@
+@use "../../../Assets/Colors/Colors" as c;
+
+.hero-header {
+  position: relative;
+  .title {
+    position: absolute;
+    top: 50%; 
+    left: 0;
+    transform: translateY(-50%); 
+    width: 100%;
+    padding-left: 5%;
+    color: white;
+    z-index: 2;
+    text-align: left; 
+
+    h1 {
+      position: absolute;
+      color: c.$white;
+      z-index: 1;
+      padding-top: 0.2em;
+      padding-left: 1.5vw;
+      font-size: 2em;
+    }
+
+    .site-header {
+      position: relative;
+      max-width: 100%;
+    }
+  }
+}
+
+// MEDIA QUERIES
+@media (max-width: 768px) {
+  .hero-header {
+    .title {
+        padding: 1em;
+      h1 {
+        font-size: 4vw;
+        padding-top: 4vw;
+        text-align: center;
+      }
+    }
+  }
+}

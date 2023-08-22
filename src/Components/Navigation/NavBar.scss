@@ -4,7 +4,7 @@
   list-style-type: none;
   li {
     margin-top: 4em;
-    padding: 0 1em;
+    padding: 0 1vw;
     border-right: 1.5px solid c.$white;
     display: inline-block;
     &:last-child {
@@ -22,3 +22,17 @@
     }
   }
 }
+
+
+@media (max-width: 768px) {
+  .nav-links{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    li{
+    text-align: center;
+    border: none;
+    margin: 1em 0;
+    }
+  }
+  }
