@@ -13,12 +13,12 @@
     .active-link {
       text-decoration: none;
       color: c.$white;
+      &.active {
+        color: c.$red;
+      }
       &:hover {
         color: c.$red;
       }
-    //   &:active {
-    //     color: c.$red;
-    //   }
     }
   }
 }
