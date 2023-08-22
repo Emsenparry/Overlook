@@ -11,7 +11,7 @@ const Item = (props) => {
 };
 
 
-const Slider = () => {
+const HeroSlider = () => {
   return (
     <div className="slider-container">
         {/* Returnere Carousel-komponent fra react-material-ui-carousel biblioteket */}
@@ -28,4 +28,4 @@ const Slider = () => {
 };
 
 // Exporter som named
-export { Slider, Item };
+export { HeroSlider, Item };

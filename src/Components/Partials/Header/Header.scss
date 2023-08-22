@@ -2,10 +2,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 11%;
+  padding: 1.6% 4.5% 1.6% 5%;
   background-color: black;
-  img {
+  .logo {
     cursor: pointer;
+    max-width: 100%;
   }
   
 }

@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.scss";
-import { Slider } from "./Components/Partials/Header/Carousel/Carousel";
 import Header from "./Components/Partials/Header/Header";
+import AppRouter from "./Components/AppRouter/AppRouter";
 
 const App = () => {
   return (
     <>
     <Header />
-      <Slider />
+      <AppRouter />
     </>
   );
 };

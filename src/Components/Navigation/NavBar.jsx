@@ -7,19 +7,19 @@ const NavBar = () => {
     <nav className="nav-main">
       <ul className="nav-links">
         <li>
-          <NavLink to="/path" className="active-link">FORSIDE</NavLink>
+          <NavLink to="/" className="active-link">FORSIDE</NavLink>
         </li>
         <li>
-          <NavLink to="/path" className="active-link">HOTELLER & DESTINATIONER</NavLink>
+          <NavLink to="/hotels" className="active-link">HOTELLER & DESTINATIONER</NavLink>
         </li>
         <li>
-          <NavLink to="/path" className="active-link">VÆRELSER</NavLink>
+          <NavLink to="/rooms" className="active-link">VÆRELSER</NavLink>
         </li>
         <li>
-          <NavLink to="/path" className="active-link">RESERVATION</NavLink>
+          <NavLink to="/reservations" className="active-link">RESERVATION</NavLink>
         </li>
         <li>
-          <NavLink to="/path" className="active-link">LOGIN</NavLink>
+          <NavLink to="/login" className="active-link">LOGIN</NavLink>
         </li>
       </ul>
     </nav>
