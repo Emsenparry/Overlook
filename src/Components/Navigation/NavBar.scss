@@ -1,0 +1,16 @@
+$primary: #fff;
+
+  .nav-links {
+    list-style-type: none;
+    li {
+      display: inline-block;
+      padding: 0 15px;
+      margin-right: 1em;
+      .active-link {
+        text-decoration: none;
+        color: $primary;
+      }
+    }
+  }
+
+
