@@ -15,9 +15,7 @@ const Home = () => {
     </div>
     <HeroSlider />
     </div>
-    <div>
       <Gallery />
-    </div>
     </ContentWrapper>
   )
 }

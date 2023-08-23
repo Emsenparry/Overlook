@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import './Gallery.scss';
 
 const Gallery = () => {
   const [data, setData] = useState([]);
@@ -18,17 +19,30 @@ const Gallery = () => {
   }, [setData]);
 
   return (
-    <article className="card">
-      {data.slice(0,3).map((item) => (
-        <div key={item.id}>
-          <h2>{item.title}</h2>
-          <p>{item.teaser}</p>
+    <article className="card-container">
+    {data.slice(0, 3).map((item) => (
+      <div key={item.id} className="card">
+        <div className="card-image">
+          {/* Wrap the image and link around the image */}
           {item.image && item.image.filename && (
-            <img src={`http://localhost:4000/images/${item.image.filename}`} alt={item.title} />
+            <Link to={`/hotels`}>
+              <img
+                src={`http://localhost:4000/images/${item.image.filename}`}
+                alt={item.title}
+              />
+            </Link>
           )}
+          <div className="overlay">
+            <Link to={`/hotels`}>
+              <h2>{item.title}</h2>
+            </Link>
+            <p>{item.teaser}</p>
+          </div>
         </div>
-      ))}
-    </article>
+      </div>
+    ))}
+  </article>
+  
   );
 };
 

@@ -1,0 +1,9 @@
+@use "../../../../Assets/Colors/Colors" as c;
+
+.card-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 2em 5% 0 5%;
+  
+}
