@@ -10,7 +10,7 @@ const Footer = () => {
         <div>
          <p>© 2021 Hotel Overlook. Alle rettigheder forbeholdt.</p>   
         </div>
-        <div>
+        <div className='icons'>
             <FaTwitterSquare size={30} />
             <BsFacebook size={30} />
         </div>
