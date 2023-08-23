@@ -23,7 +23,6 @@ const Gallery = () => {
     {data.slice(0, 3).map((item) => (
       <div key={item.id} className="card">
         <div className="card-image">
-          {/* Wrap the image and link around the image */}
           {item.image && item.image.filename && (
             <Link to={`/hotels`}>
               <img

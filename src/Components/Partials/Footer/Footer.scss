@@ -1,0 +1,23 @@
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 5%;
+  background-color: #fff;
+  p {
+    color: #999999;
+  }
+  .nav-ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    li {
+      margin: 0;
+    }
+    .active-li {
+        padding: 0 0 0 1vw;
+      color: #999999;
+      text-decoration: none;
+    }
+  }
+}

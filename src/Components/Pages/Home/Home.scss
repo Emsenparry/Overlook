@@ -1,5 +1,9 @@
 @use "../../../Assets/Colors/Colors" as c;
 
+html{
+  background-color: #EBEBEB;
+}
+
 .hero-header {
   position: relative;
   .title {
@@ -27,6 +31,13 @@
       max-width: 100%;
     }
   }
+}
+
+//OTHER
+.lastnews {
+  font-weight: 600;
+  font-size: 2em;
+  padding: 2em 0 2em 5%;
 }
 
 // MEDIA QUERIES

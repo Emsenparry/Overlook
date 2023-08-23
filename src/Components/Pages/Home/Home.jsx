@@ -15,6 +15,7 @@ const Home = () => {
     </div>
     <HeroSlider />
     </div>
+    <p className='lastnews'>Sidste nyt</p>
       <Gallery />
     </ContentWrapper>
   )
