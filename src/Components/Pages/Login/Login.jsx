@@ -50,8 +50,11 @@ const Login = () => {
           onSubmit={handleSubmit(submitHandle)}
           method="POST"
         >
+          <div className="Login-info">
+            <h2>Login</h2>
+            <p>Indtast dit brugernavn og adgangskode for at logge ind</p>
+          </div>
           <div>
-            <label htmlFor="username">Brugernavn</label>
             <input
               type="text"
               name="username"
@@ -59,8 +62,8 @@ const Login = () => {
               {...register("username", { required: "Indtast brugernavn!" })}
             />
           </div>
+          <span className="error">{errors.username?.message}</span>
           <div>
-            <label htmlFor="Adganskode">Adgangskode</label>
             <input
               type="password"
               name="password"
@@ -68,7 +71,7 @@ const Login = () => {
               {...register("password", { required: "Indtast adgangskode!" })}
             />
           </div>
-          <p className="error">{errors.username?.message}</p>
+          <span className="error">{errors.password?.message}</span>
           <div className="button-container">
             <button
               className="login"
@@ -78,15 +81,14 @@ const Login = () => {
               Login
             </button>
             <button className="reset" type="button" onClick={() => reset()}>
-              Anuller
+              Annuller
             </button>
           </div>
-          <p className="error">{errors.password?.message}</p>
         </form>
       ) : (
-        <div className="logged-in">
+        <div>
           <p>Du er logget ind</p>
-          <button type="button" onClick={LogOut}>
+          <button className="logged-in" type="button" onClick={LogOut}>
             Log ud
           </button>
         </div>

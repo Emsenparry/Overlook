@@ -1,0 +1,52 @@
+@use "../../../Assets/Colors/Colors" as c;
+
+// Styling for når man skal logge ind
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 2rem;
+  padding-left: 1rem;
+  input {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+    width: 100%;
+    margin-bottom: 2em;
+  }
+  .error {
+    color: c.$red;
+    font-size: 0.875rem;
+  }
+  .button-container {
+    display: flex;
+    gap: 1rem;
+    button {
+      font-weight: bold;
+      border-radius: 0.3em;
+      cursor: pointer;
+      padding: 0.5rem 1rem;
+      background-color: c.$red;
+      color: c.$white;
+      border: none;
+      .reset {
+        background-color: c.$red;
+        color: c.$white;
+        border: none;
+      }
+      p {
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// Style til når man er logget ind
+.logged-in {
+  padding: 0.5rem 1rem;
+  background-color: c.$red;
+  color: c.$white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
