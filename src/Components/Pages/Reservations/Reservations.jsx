@@ -1,4 +1,5 @@
 import React from "react";
+import './Reservations.scss';
 
 const Reservations = () => {
   return (
@@ -10,7 +11,7 @@ const Reservations = () => {
         </p>
       </div>
 
-      <form>
+      <form className="reservation-form">
         <div className="DH">
           <select>
             <option>Vælg destination & hotel</option>
@@ -51,6 +52,9 @@ const Reservations = () => {
               Flex
             </label>
           </div>
+        </div>
+        <div>
+
         </div>
       </form>
     </>
