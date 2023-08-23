@@ -23,9 +23,9 @@ const Gallery = () => {
         <div key={item.id}>
           <h2>{item.title}</h2>
           <p>{item.teaser}</p>
-          <img src={item.image}
-          alt={item.title}
-          />
+          {item.image && item.image.filename && (
+            <img src={`http://localhost:4000/images/${item.image.filename}`} alt={item.title} />
+          )}
         </div>
       ))}
     </article>
