@@ -1,9 +1,10 @@
 import React from "react";
 import './Reservations.scss';
+import { ContentWrapper } from "../../ContentWrapper/ContentWrapper";
 
 const Reservations = () => {
   return (
-    <>
+    <ContentWrapper title="Reservation">
       <div>
         <h2>Reservation</h2>
         <p>
@@ -57,7 +58,7 @@ const Reservations = () => {
 
         </div>
       </form>
-    </>
+    </ContentWrapper>
   );
 };
 
