@@ -1,7 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useAuth } from "../../Providers/AuthProvider";
-import { useForm } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
 import "./Login.scss";
 import { ContentWrapper } from "../../ContentWrapper/ContentWrapper";
 
@@ -40,10 +40,12 @@ const Login = () => {
   const LogOut = () => {
     sessionStorage.removeItem("token");
     setLoginData("");
+    reset();
   };
 
   return (
     <ContentWrapper title="Login">
+      <FormProvider {...register}>
       {!loginData ? (
         <form
           className="login-form"
@@ -93,6 +95,7 @@ const Login = () => {
           </button>
         </div>
       )}
+      </FormProvider>
     </ContentWrapper>
   );
 };
