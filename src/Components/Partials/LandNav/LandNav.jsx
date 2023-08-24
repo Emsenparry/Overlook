@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, NavLink, useParams } from "react-router-dom";
-import './LandNav.scss';
+import "./LandNav.scss";
 
 const HotelNav = () => {
   const [data, setData] = useState([]);
@@ -45,26 +45,30 @@ const HotelList = () => {
   }, [slug]);
 
   return (
-    <div className="container">
-    <HotelNav />
-    {data && (
-      <div>
-        <h2>Vores hoteller i {data.name}</h2>
-        <p>{data.description}</p>
-        {data.cities.map((item) => (
-          <div key={item.city_id}>
-            <Link to={`/destinations/${slug}/${item.name}`}>
-              <img
-                src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
-                alt={item.CityImage.city_image_title}
-              />
-              <h2>{item.name}</h2>
-            </Link>
+    <figure className="figure-main">
+      <HotelNav />
+      {data && (
+        <div className="hotels-container">
+          <h2>Vores hoteller i {data.name}</h2>
+          <p>{data.description}</p>
+          <div className="cities-list">
+            {data.cities.map((item) => (
+              <div className="city-card" key={item.city_id}>
+                <Link to={`/destinations/${slug}/${item.name}`} className="link">
+                  <div className="image-container">
+                    <img
+                      src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
+                      alt={item.CityImage.city_image_title}
+                    />
+                  </div>
+                  <h2>{item.name}</h2>
+                </Link>
+              </div>
+            ))}
           </div>
-        ))}
-      </div>
-    )}
-  </div>
+        </div>
+      )}
+    </figure>
   );
 };
 
@@ -90,7 +94,7 @@ const HotelDetails = () => {
         </div>
       )}
     </div>
-  )
+  );
 };
 
 export { HotelNav, HotelList, HotelDetails };

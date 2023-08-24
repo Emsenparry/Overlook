@@ -1,21 +1,61 @@
-@use '../../../Assets/Colors/Colors' as c;
+@use "../../../Assets/Colors/Colors" as c;
 
-    .centered-section {
+// SCSS til lande navbaren
+.centered-section {
+  display: flex;
+  justify-content: center;
+  background-color: c.$white;
+  padding: 1.5em 0;
+  .list-item {
+    list-style: none;
+    margin: 0 10px;
+  }
+  .nav-link {
+    text-decoration: none;
+    &.active {
+      color: c.$red;
+    }
+    &:hover {
+      color: c.$red;
+    }
+  }
+}
+
+// HotelList
+.figure-main {
+  .hotels-container {
+    padding-left: 5%;
+    .cities-list {
         display: flex;
-        justify-content: center;
-        .list-item {
-            list-style: none;
-            margin: 0 10px;
-          }
-          .nav-link {
+        flex-wrap: wrap;
+        gap: 0 3em;
+        .city-card {
+          text-align: center;
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          overflow: hidden;
+          margin: 2em 0;
+          .link{
             text-decoration: none;
-            &.active {
-                color: c.$red;
-              }
-              &:hover {
-                color: c.$red;
-              }
+            color: c.$black;
           }
+          .image-container {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              overflow: hidden;
+            }
+          }
+        }
       }
+  }
   
-  
+}
+
+h2 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

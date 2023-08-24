@@ -1,7 +1,6 @@
 import ImageHeader from "../../../Partials/ImageHeader/ImageHeader";
 import { HotelList } from "../../../Partials/LandNav/LandNav";
 import { ContentWrapper } from "../../../ContentWrapper/ContentWrapper";
-import { InfoWrapper } from "./Land.style";
 
 const Land = () => {
   return (
@@ -13,11 +12,12 @@ const Land = () => {
           />
         </div>
         <section>
-          <InfoWrapper>
+          <article>
             <div><HotelList /></div>
             <div></div>
-          </InfoWrapper>
+          </article>
         </section>
+        
       </ContentWrapper>
     </>
   );
