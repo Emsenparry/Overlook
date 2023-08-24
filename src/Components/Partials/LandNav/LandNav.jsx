@@ -36,7 +36,6 @@ const HotelList = () => {
       const result = await axios.get(
         `http://localhost:4000/destinations/${slug}`
       );
-      console.log(result.data);
       setData(result.data);
     };
     getData();
@@ -62,4 +61,29 @@ const HotelList = () => {
   );
 };
 
-export { HotelNav, HotelList };
+
+const HotelDetails = () => {
+  const [data, setData] = useState();
+  const { city_id } = useParams();
+
+  useEffect(() => {
+    const getData = async () => {
+      const result = await axios.get(
+        `http://localhost:4000/destinations/${city_id}`
+      );
+      setData(result.data);
+    };
+    getData();
+  }, [city_id]);
+  return (
+    <div>
+      {data && (
+        <div>
+          <h2>Hotel Details</h2>
+        </div>
+      )}
+    </div>
+  )
+};
+
+export { HotelNav, HotelList, HotelDetails };

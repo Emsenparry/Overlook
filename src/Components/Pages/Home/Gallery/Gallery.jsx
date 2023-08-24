@@ -24,7 +24,7 @@ const Gallery = () => {
       <div key={item.id} className="card">
         <div className="card-image">
           {item.image && item.image.filename && (
-            <Link to={`/hotels`}>
+            <Link to={`/destinations`}>
               <img
                 src={`http://localhost:4000/images/${item.image.filename}`}
                 alt={item.title}
@@ -32,7 +32,7 @@ const Gallery = () => {
             </Link>
           )}
           <div className="overlay">
-            <Link to={`/hotels`}>
+            <Link to={`/destinations`}>
               <h2>{item.title}</h2>
             </Link>
             <p>{item.teaser}</p>

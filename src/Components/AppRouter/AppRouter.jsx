@@ -6,6 +6,7 @@ import Rooms from "../Pages/Rooms/Rooms";
 import Reservations from "../Pages/Reservations/Reservations";
 import Login from "../Pages/Login/Login";
 import NotFound from "../Pages/NotFound/NotFound";
+import { HotelDetails, HotelList } from "../Partials/LandNav/LandNav";
 
 const AppRouter = () => {
   return (
@@ -13,8 +14,8 @@ const AppRouter = () => {
       <Route index element={<Home />} />
       <Route path="/destinations">
           <Route index element={<Land />} />
-          <Route path=":slug" element={<Land />}>
-            <Route path=":id" element={<Land />} />
+          <Route path=":slug" element={<HotelList />}>
+            <Route path=":city_id" element={<HotelDetails />} />
           </Route>
       </Route>
       <Route path="/rooms" element={<Rooms />} />

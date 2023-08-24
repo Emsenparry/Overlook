@@ -2,6 +2,7 @@ import ImageHeader from "../../../Partials/ImageHeader/ImageHeader";
 import { HotelList, HotelNav } from "../../../Partials/LandNav/LandNav";
 import { ContentWrapper } from "../../../ContentWrapper/ContentWrapper";
 import { InfoWrapper } from "./Land.style";
+import { Outlet } from "react-router-dom";
 
 const Land = () => {
   return (
@@ -16,7 +17,7 @@ const Land = () => {
         <section>
           <InfoWrapper>
             <div><HotelList /></div>
-            <div>Nothing</div>
+            <div><Outlet /></div>
           </InfoWrapper>
         </section>
       </ContentWrapper>
