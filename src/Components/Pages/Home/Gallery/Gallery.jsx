@@ -45,4 +45,38 @@ const Gallery = () => {
   );
 };
 
-export default Gallery;
+const GalleryRooms = () => {
+  return(
+    <article className="card-container">
+    <div className="card">
+      <div className="card-image">
+      <img src={require("../../../../Assets/images/room-standard-single-bed.jpg")} alt="Image1" />
+      <div className="overlay">
+        <h2>Standard Single</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius quod autem cupiditate voluptates.</p>
+      </div>
+      </div>
+    </div>
+    <div className="card">
+      <div className="card-image">
+      <img src={require("../../../../Assets/images/room-superior-plus-bedroom.jpg")} alt="Image1" />
+      <div className="overlay">
+        <h2>Superior Plus</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius quod autem cupiditate voluptates.</p>
+      </div>
+      </div>
+    </div>
+    <div className="card">
+      <div className="card-image">
+      <img src={require("../../../../Assets/images/room-junior-suite-bedroom.jpg")} alt="Image1" />
+      <div className="overlay">
+        <h2>Junior Plus</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius quod autem cupiditate voluptates.</p>
+      </div>
+      </div>
+    </div>
+</article>
+  )
+}
+
+export { Gallery, GalleryRooms };
