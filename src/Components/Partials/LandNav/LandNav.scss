@@ -1,0 +1,21 @@
+@use '../../../Assets/Colors/Colors' as c;
+
+    .centered-section {
+        display: flex;
+        justify-content: center;
+        .list-item {
+            list-style: none;
+            margin: 0 10px;
+          }
+          .nav-link {
+            text-decoration: none;
+            &.active {
+                color: c.$red;
+              }
+              &:hover {
+                color: c.$red;
+              }
+          }
+      }
+  
+  

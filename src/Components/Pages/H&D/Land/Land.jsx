@@ -1,8 +1,7 @@
 import ImageHeader from "../../../Partials/ImageHeader/ImageHeader";
-import { HotelList, HotelNav } from "../../../Partials/LandNav/LandNav";
+import { HotelList } from "../../../Partials/LandNav/LandNav";
 import { ContentWrapper } from "../../../ContentWrapper/ContentWrapper";
 import { InfoWrapper } from "./Land.style";
-import { Outlet } from "react-router-dom";
 
 const Land = () => {
   return (
@@ -13,11 +12,10 @@ const Land = () => {
             img={require("../../../../Assets/images/seljalandvoss-iceland.jpg")}
           />
         </div>
-        <HotelNav />
         <section>
           <InfoWrapper>
             <div><HotelList /></div>
-            <div><Outlet /></div>
+            <div></div>
           </InfoWrapper>
         </section>
       </ContentWrapper>
