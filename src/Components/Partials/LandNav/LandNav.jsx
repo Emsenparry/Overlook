@@ -28,7 +28,7 @@ const HotelNav = () => {
 };
 
 const HotelList = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState();
   const { slug } = useParams();
 
   useEffect(() => {
@@ -36,22 +36,29 @@ const HotelList = () => {
       const result = await axios.get(
         `http://localhost:4000/destinations/${slug}`
       );
+      console.log(result.data);
       setData(result.data);
     };
     getData();
   }, [slug]);
 
   return (
-    <ul>
+    <div>
       {data &&
-        data.map((hotel) => {
-          return <li key={hotel.id}>
-            <Link to={`/destinations/${slug}/${hotel.id}`}>
-            {hotel.description}
-            </Link>
-            </li>;
+        data.cities.map((item) => {
+          return (
+            <div key={item.city_id}>
+              <Link to={`/destinations/${slug}/${item.name}`}>
+                <img
+                  src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
+                  alt={item.CityImage.city_image_title}
+                />
+                <h2>{item.name}</h2>
+              </Link>
+            </div>
+          );
         })}
-    </ul>
+    </div>
   );
 };
 
