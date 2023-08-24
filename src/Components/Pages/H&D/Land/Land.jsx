@@ -1,22 +1,27 @@
-import React from "react";
 import ImageHeader from "../../../Partials/ImageHeader/ImageHeader";
-import "./Land.scss";
-import LandNav from "../../../Partials/LandNav/LandNav";
+import { HotelList, HotelNav } from "../../../Partials/LandNav/LandNav";
 import { ContentWrapper } from "../../../ContentWrapper/ContentWrapper";
+import { InfoWrapper } from "./Land.style";
 
 const Land = () => {
   return (
     <>
-    <ContentWrapper title="Hoteller og destinationer">
-      <div className="ImageHeader">
-        <ImageHeader
-          img={require("../../../../Assets/images/seljalandvoss-iceland.jpg")}
-        />
-      </div>
-      <LandNav />
+      <ContentWrapper title="Hoteller og destinationer">
+        <div className="ImageHeader">
+          <ImageHeader
+            img={require("../../../../Assets/images/seljalandvoss-iceland.jpg")}
+          />
+        </div>
+        <HotelNav />
+        <section>
+          <InfoWrapper>
+            <div><HotelList /></div>
+            <div>Nothing</div>
+          </InfoWrapper>
+        </section>
       </ContentWrapper>
     </>
   );
 };
 
-export default Land;
+export { Land };
