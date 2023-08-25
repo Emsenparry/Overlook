@@ -3,7 +3,7 @@ import React from "react";
 import { useAuth } from "../../Providers/AuthProvider";
 import { FormProvider, useForm } from "react-hook-form";
 import { ContentWrapper } from "../../ContentWrapper/ContentWrapper";
-import "./Login.scss"; // Make sure the correct path is used here
+import "./Login.scss"; 
 
 const Login = () => {
   const { loginData, setLoginData } = useAuth();
