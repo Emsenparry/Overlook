@@ -128,6 +128,4 @@ const HotelDetails = () => {
   );
 };
 
-const RoomList = () => {};
-
-export { HotelNav, HotelList, HotelDetails, RoomList };
+export { HotelNav, HotelList, HotelDetails };

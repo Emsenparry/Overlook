@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import './Gallery.scss';
+import "./Gallery.scss";
 
 const Gallery = () => {
   const [data, setData] = useState([]);
@@ -20,63 +20,90 @@ const Gallery = () => {
 
   return (
     <article className="card-container">
-    {data.slice(0, 3).map((item) => (
-      <div key={item.id} className="card">
-        <div className="card-image">
-          {item.image && item.image.filename && (
+      {data.slice(0, 3).map((item) => (
+        <div key={item.id} className="card">
+          <div className="card-image">
             <Link to={`/destinations`}>
               <img
-                src={`http://localhost:4000/images/${item.image.filename}`}
+                src={require(`../../../../Assets/images/${item.image.filename}`)}
                 alt={item.title}
               />
             </Link>
-          )}
-          <div className="overlay">
-            <Link to={`/destinations`}>
-              <h2>{item.title}</h2>
-            </Link>
-            <p>{item.teaser}</p>
+            <div className="overlay">
+              <Link to={`/destinations`}>
+                <h2>{item.title}</h2>
+              </Link>
+              <p>{item.teaser}</p>
+            </div>
           </div>
         </div>
-      </div>
-    ))}
-  </article>
-  
+      ))}
+    </article>
   );
 };
 
 const GalleryRooms = () => {
-  return(
+  return (
     <article className="card-container">
-    <div className="card">
-      <div className="card-image">
-      <Link to={`/rooms`}><img src={require("../../../../Assets/images/room-standard-single-bed.jpg")} alt="Image1" /></Link>
-      <div className="overlay">
-      <Link to={`/rooms`}><h2>Standard Single</h2></Link>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius quod autem cupiditate voluptates.</p>
+      <div className="card">
+        <div className="card-image">
+          <Link to={`/rooms`}>
+            <img
+              src={require("../../../../Assets/images/room-standard-single-bed.jpg")}
+              alt="Image1"
+            />
+          </Link>
+          <div className="overlay">
+            <Link to={`/rooms`}>
+              <h2>Standard Single</h2>
+            </Link>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium eius quod autem cupiditate voluptates.
+            </p>
+          </div>
+        </div>
       </div>
+      <div className="card">
+        <div className="card-image">
+          <Link to={`/rooms`}>
+            <img
+              src={require("../../../../Assets/images/room-superior-plus-bedroom.jpg")}
+              alt="Image1"
+            />
+          </Link>
+          <div className="overlay">
+            <Link to={`/rooms`}>
+              <h2>Superior Plus</h2>
+            </Link>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium eius quod autem cupiditate voluptates.
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-    <div className="card">
-      <div className="card-image">
-      <Link to={`/rooms`}><img src={require("../../../../Assets/images/room-superior-plus-bedroom.jpg")} alt="Image1" /></Link>
-      <div className="overlay">
-      <Link to={`/rooms`}><h2>Superior Plus</h2></Link>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius quod autem cupiditate voluptates.</p>
+      <div className="card">
+        <div className="card-image">
+          <Link to={`/rooms`}>
+            <img
+              src={require("../../../../Assets/images/room-junior-suite-bedroom.jpg")}
+              alt="Image1"
+            />
+          </Link>
+          <div className="overlay">
+            <Link to={`/rooms`}>
+              <h2>Junior Plus</h2>
+            </Link>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Praesentium eius quod autem cupiditate voluptates.
+            </p>
+          </div>
+        </div>
       </div>
-      </div>
-    </div>
-    <div className="card">
-      <div className="card-image">
-      <Link to={`/rooms`}><img src={require("../../../../Assets/images/room-junior-suite-bedroom.jpg")} alt="Image1" /></Link>
-      <div className="overlay">
-      <Link to={`/rooms`}><h2>Junior Plus</h2></Link>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium eius quod autem cupiditate voluptates.</p>
-      </div>
-      </div>
-    </div>
-</article>
-  )
-}
+    </article>
+  );
+};
 
 export { Gallery, GalleryRooms };
