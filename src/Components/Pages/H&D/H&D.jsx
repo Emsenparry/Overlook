@@ -1,7 +1,7 @@
 import { ContentWrapper } from "../../ContentWrapper/ContentWrapper";
 import ImageHeader from "../../Partials/ImageHeader/ImageHeader";
 import { HotelList } from "../../Partials/LandNav/LandNav";
-
+import './H&D.scss';
 
 const Destinations = () => {
   return (
@@ -13,7 +13,7 @@ const Destinations = () => {
           />
         </div>
         <section>
-          <article>
+          <article className="Wrapper">
             <div><HotelList /></div>
             <div></div>
           </article>

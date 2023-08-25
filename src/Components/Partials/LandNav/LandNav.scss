@@ -4,6 +4,7 @@
 .centered-section {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-color: c.$white;
   padding: 1.5em 0;
   .list-item {
@@ -25,37 +26,79 @@
 .figure-main {
   .hotels-container {
     padding-left: 5%;
+    padding-right: 5%;
     .cities-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0 3em;
-        .city-card {
-          text-align: center;
-          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-          overflow: hidden;
-          margin: 2em 0;
-          .link{
-            text-decoration: none;
-            color: c.$black;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0 3em;
+      .city-card {
+        text-align: center;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        margin: 2em 0;
+        background-color: c.$white;
+        .link {
+          text-decoration: none;
+          color: c.$black;
+          &:hover {
+            color: c.$red;
           }
-          .image-container {
+        }
+        .image-container {
+          width: 100%;
+          height: 250px;
+          overflow: hidden;
+          img {
             width: 100%;
-            height: 250px;
+            height: 100%;
+            object-fit: cover;
             overflow: hidden;
-            img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              overflow: hidden;
-            }
           }
         }
       }
+    }
   }
-  
 }
 
 h2 {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+// HotelDetails
+.sect-details {
+  padding-left: 5%;
+  padding-right: 5%;
+  .card {
+    background-color: c.$white;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    max-width: 500px;
+    margin-top: 2em;
+    h2 {
+      padding-bottom: 1em;
+    }
+    .card-link {
+      text-decoration: none;
+      color: #333;
+      &:hover {
+        color: c.$red;
+      }
+      .card-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Media queries
+
+//Navbar
+@media screen and (max-width: 768px) {
+  .centered-section {
+    .list-item {
+      margin: 0 8px;
+    }
+  }
 }
