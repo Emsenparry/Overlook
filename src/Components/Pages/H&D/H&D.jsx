@@ -1,14 +1,15 @@
-import ImageHeader from "../../../Partials/ImageHeader/ImageHeader";
-import { HotelList } from "../../../Partials/LandNav/LandNav";
-import { ContentWrapper } from "../../../ContentWrapper/ContentWrapper";
+import { ContentWrapper } from "../../ContentWrapper/ContentWrapper";
+import ImageHeader from "../../Partials/ImageHeader/ImageHeader";
+import { HotelList } from "../../Partials/LandNav/LandNav";
 
-const Land = () => {
+
+const Destinations = () => {
   return (
     <>
       <ContentWrapper title="Hoteller og destinationer">
         <div className="ImageHeader">
           <ImageHeader
-            img={require("../../../../Assets/images/seljalandvoss-iceland.jpg")}
+            img={require("../../../Assets/images/seljalandvoss-iceland.jpg")}
           />
         </div>
         <section>
@@ -23,4 +24,4 @@ const Land = () => {
   );
 };
 
-export { Land };
+export { Destinations };

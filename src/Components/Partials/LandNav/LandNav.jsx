@@ -54,7 +54,10 @@ const HotelList = () => {
           <div className="cities-list">
             {data.cities.map((item) => (
               <div className="city-card" key={item.city_id}>
-                <Link to={`/destinations/${slug}/${item.name}`} className="link">
+                <Link
+                  to={`/destinations/${slug}/${item.name}`}
+                  className="link"
+                >
                   <div className="image-container">
                     <img
                       src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
@@ -88,11 +91,32 @@ const HotelDetails = () => {
   return (
     <div>
       <HotelNav />
-      {data && (
-        <div>
-          <h2>Hotel Details</h2>
-        </div>
-      )}
+      <figure className="figure-main">
+        {data && (
+          <div className="hotels-container">
+            <div className="cities-list">
+              {data.cities.map((item) => (
+                <div className="city-card" key={item.city_id}>
+                  <h2>Vores hoteller i {item.name}</h2>
+                  <p>{item.description}</p>
+                  <Link
+                    to={`/destinations/${slug}/${item.name}`}
+                    className="link"
+                  >
+                    <div className="image-container">
+                      <img
+                        src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
+                        alt={item.CityImage.city_image_title}
+                      />
+                    </div>
+                    <h2>{item.name}</h2>
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+      </figure>
     </div>
   );
 };
