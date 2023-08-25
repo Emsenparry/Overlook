@@ -25,6 +25,7 @@
 // HotelList
 .figure-main {
   .hotels-container {
+    margin-top: 4em;
     padding-left: 5%;
     padding-right: 5%;
     .cities-list {
@@ -66,30 +67,39 @@ h2 {
 }
 
 // HotelDetails
-.sect-details {
-  padding-left: 5%;
-  padding-right: 5%;
-  .card {
-    background-color: c.$white;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    max-width: 500px;
-    margin-top: 2em;
-    h2 {
-      padding-bottom: 1em;
-    }
-    .card-link {
-      text-decoration: none;
-      color: #333;
-      &:hover {
-        color: c.$red;
+.wrapper{
+  display: flex;
+  margin-top: 4em;
+  .sect-details {
+    padding-left: 5%;
+    padding-right: 5%;
+    .card {
+      background-color: c.$white;
+      box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+      text-align: center;
+      max-width: 500px;
+      margin-top: 2em;
+      h2 {
+        padding-bottom: 1em;
       }
-      .card-image {
-        width: 100%;
-        height: auto;
+      .card-link {
+        text-decoration: none;
+        color: #333;
+        &:hover {
+          color: c.$red;
+        }
+        .card-image {
+          width: 100%;
+          height: auto;
+        }
       }
     }
   }
+  .test{
+    border-left: 3px solid grey;
+    width: 40%;
+  }
+  
 }
 
 // Media queries

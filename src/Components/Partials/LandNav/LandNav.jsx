@@ -89,34 +89,42 @@ const HotelDetails = () => {
     getData();
   }, [slug, city_id]);
   return (
-    <section>
+    <>
       <HotelNav />
-      {data &&
-        data.cities.map((item) => {
-          return (
-            <>
-            <div className="sect-details">
-              <div>
-                <h2>Vores hoteller i {item.name}</h2>
-                <p>{item.description}</p>
-              </div>
-              <div className="card" key={item.id}>
-                <Link to={`/destinations/${item.slug}`} className="card-link">
+      <section className="wrapper">
+        {data &&
+          data.cities.map((item) => {
+            return (
+              <>
+                <div className="sect-details">
                   <div>
-                    <img
-                      src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
-                      alt={item.name}
-                      className="card-image"
-                    />
+                    <h2>Vores hoteller i {item.name}</h2>
+                    <p>{item.description}</p>
                   </div>
-                  <h2 className="info">{item.name}</h2>
-                </Link>
-              </div>
-              </div>
-            </>
-          );
-        })}
-    </section>
+                  <div className="card" key={item.id}>
+                    <Link
+                      to={`/destinations/${item.slug}`}
+                      className="card-link"
+                    >
+                      <div>
+                        <img
+                          src={require(`../../../Assets/images/${item.CityImage.city_image_filename}`)}
+                          alt={item.name}
+                          className="card-image"
+                        />
+                      </div>
+                      <h2 className="info">{item.name}</h2>
+                    </Link>
+                  </div>
+                </div>
+                <div className="test">
+                  Other information here.
+                </div>
+              </>
+            );
+          })}
+      </section>
+    </>
   );
 };
 

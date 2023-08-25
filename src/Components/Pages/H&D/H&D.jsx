@@ -12,13 +12,9 @@ const Destinations = () => {
             img={require("../../../Assets/images/seljalandvoss-iceland.jpg")}
           />
         </div>
-        <section>
-          <article className="Wrapper">
-            <div><HotelList /></div>
-            <div></div>
-          </article>
+        <section >
+            <HotelList />
         </section>
-        
       </ContentWrapper>
     </>
   );
